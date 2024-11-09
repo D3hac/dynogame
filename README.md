@@ -1,33 +1,70 @@
-# Online Library
+# Dino Game
 
-This project was developed as part of the **Client-Side Web Programming** course in the 2nd Year of the Computer Engineering program at ISLA. The goal is to provide users with an engaging and functional online library experience.
+This is a 2D side-scroller game developed in Python using the Pygame library, inspired by the Chrome Dinosaur Game. The objective is to control a dinosaur, make it jump over obstacles, and survive as long as possible.
 
-## Project Objectives
+## Game Features
 
-- Develop a **Bootstrap**-based website with database access.
-- Allow users to browse and interact with options for renting, reserving, and purchasing library-related products and services.
+- **Jumping Dinosaur**: Avoid cacti and flying dinosaurs by jumping over them.
+- **Dynamic Obstacles**: Randomized obstacles that increase in speed as the game progresses.
+- **Score Tracking**: Earn points for each obstacle passed and receive a sound notification every 100 points.
+- **Sound Effects**: Jump, score, and collision sound effects for a more immersive experience.
+- **Game Over Screen**: Displays "Game Over" and allows restarting by pressing space.
 
-## Key Features
+## Installation
 
-### Home
-The homepage includes a main menu and an image carousel showcasing library activities. It also has informational "cards" that users can expand for more details.
+1. **Clone this repository**:
+   ```bash
+   git clone https://github.com/D3hac/dynogame.git
+   ```
+   
+2. **Navigate to the project directory**:
+   ```bash
+   cd dynogame
+   ```
 
-### About Us
-The "About Us" section provides information about the library and is accessible from the main menu.
+3. **Install dependencies**:
+   Make sure you have [Pygame](https://www.pygame.org/news) installed. If not, install it using pip:
+   ```bash
+   pip install pygame
+   ```
 
-### Schedule
-On the "Schedule" page, users can book events and view upcoming scheduled events.
+## Running the Game
 
-### Book Search
-Allows users to search for books by title or author to check their availability.
+To start the game, run the following command:
 
-### Contacts
-Users can find contact details, the library’s location, and send messages to inquire about book availability, events, or other questions.
+```bash
+python DinoGame.py
+```
 
-## Technologies Used
-- **HTML, CSS, and JavaScript**
-- **Bootstrap** for a responsive and modern design.
-- **Visual Studio Code** as the development environment.
+## Controls
 
-## Conclusion
-This online library project created a functional and accessible platform with room for future improvements.
+- **Spacebar**: Jump
+- **Spacebar after Game Over**: Restart the game
+
+## Code Overview
+
+### Key Files
+
+- `DinoGame.py`: Main game logic with classes for `Dino`, `Clouds`, `Floor`, `Cactus`, and `FlyingDino`.
+- `image/Spritesheet.png`: Spritesheet for the dinosaur and obstacles.
+- `sound/`: Contains sound effects for jump, score, and collision.
+
+### Main Classes
+
+- `Dino`: Handles the dinosaur character's animations and jump functionality.
+- `Clouds`, `Floor`: Background elements to enhance visual dynamics.
+- `Cactus`, `FlyingDino`: Obstacles that the dinosaur must avoid.
+
+### Game Mechanics
+
+- **Obstacle Collision**: The game ends when the dinosaur collides with an obstacle.
+- **Increasing Difficulty**: The game speed increases by 1 every 100 points, making it more challenging over time.
+
+## Future Improvements
+
+Potential enhancements include adding more obstacle types, power-ups, and varying difficulty levels.
+
+## License
+
+This project is for educational purposes and is not intended for commercial use. 
+
